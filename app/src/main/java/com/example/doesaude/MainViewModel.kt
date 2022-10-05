@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.doesaude.api.Repository
 import com.example.doesaude.model.Categoria
+import com.example.doesaude.model.Postagem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -32,4 +33,16 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
             }
         }
     }
+
+    fun addPostagem(postagem: Postagem){
+        viewModelScope.launch {
+            try {
+                repository.addPostagem(postagem)
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+
+
 }
