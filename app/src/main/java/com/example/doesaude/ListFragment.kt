@@ -23,28 +23,6 @@ class ListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val listPostagem = listOf(
-            Postagem(
-                imagem = "dipirona-monoidratada-1g-com-10-comprimidos-generico-prati-donaduzzi#&gid=1&pid=1",
-                titulo = "Dipirona Monoidratada",
-                descricao = "Serve para praticamente tudo!",
-                categoria = "medicamentos"
-            ),
-            Postagem(
-                imagem = "dipirona-monoidratada-1g-com-10-comprimidos-generico-prati-donaduzzi#&gid=1&pid=1",
-                titulo = "Dipirona Monoidratada",
-                descricao = "Serve para praticamente tudo!",
-                categoria = "medicamentos"
-            ),
-            Postagem(
-                imagem = "dipirona-monoidratada-1g-com-10-comprimidos-generico-prati-donaduzzi#&gid=1&pid=1",
-                titulo = "Dipirona Monoidratada",
-                descricao = "Serve para praticamente tudo!",
-                categoria = "medicamentos"
-            )
-        )
-
-
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
         //CONFIGURAÇÃO DO RECYCLEVIEW
@@ -54,7 +32,6 @@ class ListFragment : Fragment() {
         binding.recyclerTarefa.setHasFixedSize(true)
 
 
-        adapter.setList(listPostagem)
 
         binding.floatingAdd.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_formFragment)
