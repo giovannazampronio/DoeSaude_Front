@@ -13,7 +13,7 @@ interface ApiService {
     suspend fun listCategoria(): Response<List<Categoria>>
 
 
-    @POST
+    @POST("postagem")
     suspend fun addPostagem(
         @Body postagem: Postagem
     ): Response<Postagem>
