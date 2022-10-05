@@ -18,5 +18,6 @@ interface ApiService {
         @Body postagem: Postagem
     ): Response<Postagem>
 
-
+    @GET("postagem")
+    suspend fun listPostagem(): Response<List<Postagem>>
 }

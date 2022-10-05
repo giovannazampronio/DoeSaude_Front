@@ -11,12 +11,11 @@ class PostagemAdapter : RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>
 
     private var listPostagem = emptyList<Postagem>()
 
-    class PostagemViewHolder(val binding: CardLayoutBinding): RecyclerView.ViewHolder(binding.root)
+    class PostagemViewHolder(val binding: CardLayoutBinding): RecyclerView.ViewHolder(binding.root){}
 
     //CRIARÁ COM BASE NO CARD
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostagemViewHolder {
-        return PostagemViewHolder(CardLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false
-        ))
+        return PostagemViewHolder(CardLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     //COMO IRÁ PROCESSAR DENTRO DO CARD
