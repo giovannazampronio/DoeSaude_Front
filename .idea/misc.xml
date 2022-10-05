@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jvabr/AndroidStudioProjects/Generation_Android/DoeSaude_Front/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/jvabr/AndroidStudioProjects/Generation_Android/DoeSaude_Front/app/src/main/res/layout/card_layout.xml" value="0.2" />
+        <entry key="..\:/Users/jvabr/AndroidStudioProjects/Generation_Android/DoeSaude_Front/app/src/main/res/layout/fragment_form.xml" value="0.11145833333333334" />
+        <entry key="..\:/Users/jvabr/AndroidStudioProjects/Generation_Android/DoeSaude_Front/app/src/main/res/layout/fragment_list.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Projeto_integrador/front_end/app/src/main/res/layout/activity_main.xml" value="0.18342391304347827" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Projeto_integrador/front_end/app/src/main/res/layout/fragment_form.xml" value="0.16" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Projeto_integrador/front_end/app/src/main/res/layout/fragment_list.xml" value="0.14673913043478262" />
