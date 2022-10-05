@@ -19,6 +19,10 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
     private val _myCategoriaResponse = MutableLiveData<Response<List<Categoria>>>()
     val myCategoriaResponse: LiveData<Response<List<Categoria>>> = _myCategoriaResponse
 
+    //PONTO DE ATENÇÃO
+    private val _myPostagemResponse = MutableLiveData<Response<List<Postagem>>>()
+    val myPostagemResponse: LiveData<Response<List<Postagem>>> = _myPostagemResponse
+
     init {
        // listCategoria()
     }
@@ -44,5 +48,14 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
         }
     }
 
-
+    fun listPostagem(){
+        viewModelScope.launch {
+            try {
+                val response = repository.listPostagem()
+                _myPostagemResponse.value = response
+            }catch (e : Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
 }
