@@ -13,13 +13,15 @@ interface ApiService {
     @GET("categoria")
     suspend fun listCategoria(): Response<List<Categoria>>
 
-
     @POST("postagem")
-    suspend fun addPostagem(@Body postagem: Postagem): Response<Postagem>
+    suspend fun addPostagem(
+        @Body postagem: Postagem
+    ): Response<Postagem>
 
     @GET("postagem")
     suspend fun listPostagem(): Response<List<Postagem>>
 
     @PUT("postagem")
-    suspend fun updatePostagem(@Body postagem: Postagem): Response<Postagem>
+    suspend fun updateTarefa(@Body postagem: Postagem): Response<Postagem>
+
 }

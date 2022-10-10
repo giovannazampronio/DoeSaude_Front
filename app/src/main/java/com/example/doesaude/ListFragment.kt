@@ -43,9 +43,9 @@ class ListFragment : Fragment(), TaskClickListener {
             findNavController().navigate(R.id.action_listFragment_to_formFragment)
         }
         mainViewModel.myPostagemResponse.observe(viewLifecycleOwner){
-            response -> if(response.body() != null){
-                adapter.setList(response.body()!!)
-            }
+                response -> if(response.body() != null){
+            adapter.setList(response.body()!!)
+        }
         }
         return binding.root
     }
