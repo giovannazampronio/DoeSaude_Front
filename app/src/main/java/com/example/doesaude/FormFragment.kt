@@ -21,6 +21,7 @@ class FormFragment : Fragment() {
     private lateinit var binding: FragmentFormBinding
     private val mainViewModel: MainViewModel by activityViewModels()
     private var categoriaSelecionada = 0L
+    private var postagemSelecionada: Postagem? = null
 
 
     override fun onCreateView(
@@ -29,6 +30,8 @@ class FormFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentFormBinding.inflate(layoutInflater, container, false)
+
+        carregarDados()
 
         mainViewModel.listCategoria()
 
@@ -59,30 +62,33 @@ class FormFragment : Fragment() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
-
         }
     }
-
     private fun inserirNoBanco(){
         val imagem = binding.editImagem.text.toString()
         val titulo = binding.editTitulo.text.toString()
         val descricao = binding.editDescricao.text.toString()
         val categoria = Categoria(categoriaSelecionada, null, null, null)
+        Log.d("categoria", categoria.id.toString())
 
         if(validarCampos(imagem, titulo, descricao)){
+        val salvar: String
+        if(postagemSelecionada != null){
+            salvar = "Postagem atualizada!"
+            val postagem = Postagem(postagemSelecionada?.id!!, titulo, imagem, descricao, categoria)
+            mainViewModel.addPostagem(postagem)
+        }else{
+            salvar = "Postagem criada!"
             val postagem = Postagem(0, titulo, imagem, descricao, categoria)
             mainViewModel.addPostagem(postagem)
-            Toast.makeText(context, "Postagem Criada!", Toast.LENGTH_SHORT).show()
+        }
+            Toast.makeText(context, salvar, Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_formFragment_to_listFragment)
 
         }else{
             Toast.makeText(context, "Verifique os campos!", Toast.LENGTH_SHORT).show()
         }
-
     }
-
-
-
     private fun validarCampos(imagem: String, titulo: String, descricao: String): Boolean{
         return !(
                 (imagem == "" || titulo == "" || titulo.length < 3 || titulo.length > 30)
@@ -90,6 +96,13 @@ class FormFragment : Fragment() {
                 )
     }
 
-
+    private fun carregarDados(){
+        postagemSelecionada = mainViewModel.postagemSelecionada
+        if(postagemSelecionada != null){
+            binding.editTitulo.setText(postagemSelecionada?.titulo)
+            binding.editImagem.setText(postagemSelecionada?.imagem)
+            binding.editDescricao.setText(postagemSelecionada?.descricao)
+        }
+    }
 
 }

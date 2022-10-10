@@ -3,10 +3,14 @@ package com.example.doesaude.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.doesaude.MainViewModel
 import com.example.doesaude.databinding.CardLayoutBinding
 import com.example.doesaude.model.Postagem
 
-class PostagemAdapter : RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
+class PostagemAdapter(
+    val taskClickListener: TaskClickListener,
+    val mainViewModel: MainViewModel
+) : RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>(){
 
 
     private var listPostagem = emptyList<Postagem>()
@@ -26,6 +30,10 @@ class PostagemAdapter : RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>
         holder.binding.textTitulo.text = postagem.titulo
         holder.binding.textDesc.text = postagem.descricao
         holder.binding.textCategoria.text = postagem.categoria.tipo
+
+        holder.itemView.setOnClickListener {
+            taskClickListener.onTaskClickListener(postagem)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -34,9 +42,7 @@ class PostagemAdapter : RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>
 
     //SETTAR LISTA
     fun setList(list: List<Postagem>){
-        listPostagem = list
+        listPostagem = list.sortedByDescending { it.id }
         notifyDataSetChanged()
     }
-
-
 }
