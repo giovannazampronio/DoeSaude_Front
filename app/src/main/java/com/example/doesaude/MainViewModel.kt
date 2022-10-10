@@ -26,7 +26,7 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
     val myPostagemResponse: LiveData<Response<List<Postagem>>> = _myPostagemResponse
 
     init {
-       // listCategoria()
+        // listCategoria()
     }
 
     fun listCategoria(){

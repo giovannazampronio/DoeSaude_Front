@@ -36,7 +36,7 @@ class FormFragment : Fragment() {
         mainViewModel.listCategoria()
 
         mainViewModel.myCategoriaResponse.observe(viewLifecycleOwner){
-            response -> Log.d("Requisicao", response.body().toString())
+                response -> Log.d("Requisicao", response.body().toString())
             spinnerCategoria(response.body())
         }
 
@@ -72,16 +72,16 @@ class FormFragment : Fragment() {
         Log.d("categoria", categoria.id.toString())
 
         if(validarCampos(imagem, titulo, descricao)){
-        val salvar: String
-        if(postagemSelecionada != null){
-            salvar = "Postagem atualizada!"
-            val postagem = Postagem(postagemSelecionada?.id!!, titulo, imagem, descricao, categoria)
-            mainViewModel.addPostagem(postagem)
-        }else{
-            salvar = "Postagem criada!"
-            val postagem = Postagem(0, titulo, imagem, descricao, categoria)
-            mainViewModel.addPostagem(postagem)
-        }
+            val salvar: String
+            if(postagemSelecionada != null){
+                salvar = "Postagem atualizada!"
+                val postagem = Postagem(postagemSelecionada?.id!!, titulo, imagem, descricao, categoria)
+                mainViewModel.addPostagem(postagem)
+            }else{
+                salvar = "Postagem criada!"
+                val postagem = Postagem(0, titulo, imagem, descricao, categoria)
+                mainViewModel.addPostagem(postagem)
+            }
             Toast.makeText(context, salvar, Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_formFragment_to_listFragment)
 
