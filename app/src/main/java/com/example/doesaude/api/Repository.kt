@@ -19,6 +19,6 @@ class Repository {
     }
 
     suspend fun updatePostagem(postagem: Postagem): Response<Postagem>{
-        return RetrofitInstance.api.updatePostagem(postagem)
+        return RetrofitInstance.api.updateTarefa(postagem)
     }
 }
