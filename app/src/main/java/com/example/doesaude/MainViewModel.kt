@@ -72,4 +72,15 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
             }
         }
     }
+
+    fun deletarPostagem(id: Long){
+        viewModelScope.launch {
+            try {
+                repository.deletePostagem(id)
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+                listPostagem()
+            }
+        }
+    }
 }
