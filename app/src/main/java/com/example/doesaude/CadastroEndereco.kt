@@ -12,6 +12,7 @@ import com.example.doesaude.databinding.FragmentCadastroUsuarioBinding
 class CadastroEndereco : Fragment() {
 
     private lateinit var binding: FragmentCadastroEnderecoBinding
+    private lateinit var bindingUser: FragmentCadastroUsuarioBinding
 
 
     override fun onCreateView(
@@ -20,6 +21,8 @@ class CadastroEndereco : Fragment() {
     ): View? {
 
         binding = FragmentCadastroEnderecoBinding.inflate(layoutInflater, container, false)
+
+
 
         binding.buttonEndFinalizar.setOnClickListener{
             findNavController().navigate(R.id.action_cadastro_endereco_to_listFragment)

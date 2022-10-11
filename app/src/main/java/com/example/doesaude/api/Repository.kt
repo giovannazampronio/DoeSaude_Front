@@ -2,6 +2,7 @@ package com.example.doesaude.api
 
 import com.example.doesaude.model.Categoria
 import com.example.doesaude.model.Postagem
+import com.example.doesaude.model.Usuario
 import retrofit2.Response
 
 class Repository {
@@ -12,6 +13,10 @@ class Repository {
 
     suspend fun addPostagem(postagem: Postagem): Response<Postagem>{
         return RetrofitInstance.api.addPostagem(postagem)
+    }
+
+    suspend fun addUser(usuario: Usuario): Response<Usuario>{
+        return RetrofitInstance.api.addUser(usuario)
     }
 
     suspend fun listPostagem(): Response<List<Postagem>>{
@@ -25,4 +30,6 @@ class Repository {
     suspend fun deletePostagem(id: Long): Response<Postagem>{
         return RetrofitInstance.api.deletePostagem(id)
     }
+
+
 }
