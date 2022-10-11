@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/cadastro_usuario"
-        android:name="com.example.doesaude.cadastro_usuario"
+        android:name="com.example.doesaude.CadastroUsuario"
         android:label="fragment_cadastro_usuario"
         tools:layout="@layout/fragment_cadastro_usuario" >
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/cadastro_endereco"
-        android:name="com.example.doesaude.cadastro_endereco"
+        android:name="com.example.doesaude.CadastroEndereco"
         android:label="fragment_cadastro_endereco"
         tools:layout="@layout/fragment_cadastro_endereco" >
         <action

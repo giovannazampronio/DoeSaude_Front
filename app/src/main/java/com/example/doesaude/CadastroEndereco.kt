@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.doesaude.databinding.FragmentCadastroEnderecoBinding
 import com.example.doesaude.databinding.FragmentCadastroUsuarioBinding
 
-class cadastro_endereco : Fragment() {
+class CadastroEndereco : Fragment() {
 
     private lateinit var binding: FragmentCadastroEnderecoBinding
 

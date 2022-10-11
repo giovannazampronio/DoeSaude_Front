@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.doesaude.databinding.FragmentCadastroUsuarioBinding
 
-class cadastro_usuario : Fragment() {
+class CadastroUsuario : Fragment() {
 
     private lateinit var binding: FragmentCadastroUsuarioBinding
 
