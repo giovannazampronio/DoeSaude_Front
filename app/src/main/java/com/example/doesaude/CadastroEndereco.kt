@@ -20,12 +20,14 @@ class CadastroEndereco : Fragment() {
     private val mainViewModel: MainViewModel by activityViewModels()
 
 
-    override fun onCreateView(
+
+    override fun onCreateView  (
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         binding = FragmentCadastroEnderecoBinding.inflate(layoutInflater, container, false)
+        bindingUser = FragmentCadastroUsuarioBinding.inflate(layoutInflater, container, false)
 
         binding.buttonEndFinalizar.setOnClickListener{
             findNavController().navigate(R.id.action_cadastro_endereco_to_listFragment)
@@ -69,7 +71,7 @@ class CadastroEndereco : Fragment() {
             val usuario = Usuario(0, nome, cpf, email, telefone, senha, dataNasc, endereco)
             mainViewModel.adicionarUser(usuario)
             mainViewModel.adicionarEndereco(endereco)
-
+            findNavController().navigate(R.id.action_cadastro_endereco_to_listFragment)
 
         }else{
             Toast.makeText(context, "Verifique os campos", Toast.LENGTH_LONG).show()
