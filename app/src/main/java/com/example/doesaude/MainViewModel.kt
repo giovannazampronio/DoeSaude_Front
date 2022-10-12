@@ -27,6 +27,11 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
     private val _myPostagemResponse = MutableLiveData<Response<List<Postagem>>>()
     val myPostagemResponse: LiveData<Response<List<Postagem>>> = _myPostagemResponse
 
+    private val _myEncerecoResponse = MutableLiveData<Response<List<Endereco>>>()
+    val myEnderecoResponse: LiveData<Response<List<Endereco>>> = _myEncerecoResponse
+
+
+
     init {
         // listCategoria()
     }
