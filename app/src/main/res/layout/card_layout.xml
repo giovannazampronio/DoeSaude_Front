@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="200dp"
+    android:layout_marginRight="10dp"
     app:cardElevation="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="447dp"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
-            android:id="@+id/textImagem"
+        <ImageView
+            android:id="@+id/imagePostagem"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:textColor="#BABABA"
-            android:textSize="24sp"
-            tools:text="Imagem" />
+            android:layout_height="218dp"
+            tools:srcCompat="@android:drawable/ic_menu_report_image" />
 
         <TextView
             android:id="@+id/textTitulo"
