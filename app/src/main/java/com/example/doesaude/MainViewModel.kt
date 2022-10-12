@@ -7,7 +7,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.doesaude.api.Repository
 import com.example.doesaude.model.Categoria
+import com.example.doesaude.model.Endereco
 import com.example.doesaude.model.Postagem
+import com.example.doesaude.model.Usuario
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -80,6 +82,24 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
             }catch (e: Exception){
                 Log.d("Erro", e.message.toString())
                 listPostagem()
+            }
+        }
+    }
+    fun adicionarUser(usuario: Usuario){
+        viewModelScope.launch {
+            try {
+                repository.addUser(usuario)
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+    fun adicionarEndereco(endereco: Endereco){
+        viewModelScope.launch {
+            try {
+                repository.addEndereco(endereco)
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
             }
         }
     }

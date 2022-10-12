@@ -32,7 +32,8 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_login_to_cadastro_usuario"
-            app:destination="@id/cadastro_usuario" />
+            app:destination="@id/cadastro_usuario"
+            app:popUpTo="@id/cadastro_usuario" />
     </fragment>
     <fragment
         android:id="@+id/cadastro_usuario"
@@ -41,7 +42,8 @@
         tools:layout="@layout/fragment_cadastro_usuario" >
         <action
             android:id="@+id/action_cadastro_usuario_to_cadastro_endereco"
-            app:destination="@id/cadastro_endereco" />
+            app:destination="@id/cadastro_endereco"
+            app:popUpTo="@id/cadastro_endereco" />
     </fragment>
     <fragment
         android:id="@+id/cadastro_endereco"

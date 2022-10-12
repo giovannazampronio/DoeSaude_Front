@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/idll"
+    android:id="@+id/constrainCadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroud"
@@ -10,53 +10,26 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="165dp"
-        android:layout_height="191dp"
-        android:padding="15dp"
-        app:srcCompat="@drawable/logo_cadastro" />
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenhaConfirm"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_open_doodles_loving2"
+        app:tint="#57FFFFFF" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCpf"
+        android:id="@+id/textEmail"
         style="@style/edit_text"
-        android:layout_width="382dp"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#BFFFFFFF"
-        android:hapticFeedbackEnabled="false"
-        android:hint="CPF"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"
-        android:shadowColor="#EFE6E6"
-        android:textColor="#104D55"
-        android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textEndereco"
-        style="@style/edit_text"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#BFFFFFFF"
-        android:hapticFeedbackEnabled="false"
-        android:hint="Nome"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:shadowColor="#EFE6E6"
-        android:textColor="#104D55"
-        android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCidade"
-        style="@style/edit_text"
-        android:layout_width="378dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="E-mail"
@@ -65,32 +38,128 @@
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCpf" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textBairro"
+        android:id="@+id/textNome"
         style="@style/edit_text"
-        android:layout_width="382dp"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
-        android:hint="Telefone"
+        android:hint="Nome"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:shadowColor="#9FEFE6E6"
+        android:textColor="#104D55"
+        android:textColorHint="#65000D0E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textCpf"
+        style="@style/edit_text"
+        android:layout_width="370sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:hint="CPF"
         android:minHeight="48dp"
         android:paddingStart="10dp"
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDataNasc" />
+
+    <Button
+        android:id="@+id/buttonUserAvancar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="176dp"
+        android:backgroundTint="#00777D"
+        android:text="AVANÇAR"
+        android:textColor="#FFFCFC"
+        android:textSize="16sp"
+        app:cornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenhaConfirm" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Cadastro"
+        android:textColor="#FFF2F2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textNumero"
+        android:id="@+id/textSenhaConfirm"
         style="@style/edit_text"
-        android:layout_width="382dp"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Confirme sua senha"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:shadowColor="#EFE6E6"
+        android:textColor="#104D55"
+        android:textColorHint="#65000D0E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenha" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textDataNasc"
+        style="@style/edit_text"
+        android:layout_width="370sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Nascimento"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:shadowColor="#EFE6E6"
+        android:textColor="#104D55"
+        android:textColorHint="#65000D0E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNome" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textSenha"
+        style="@style/edit_text"
+        android:layout_width="370sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="Senha"
@@ -99,34 +168,10 @@
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="314dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="2dp"
-        android:minHeight="48dp"
-        android:text="Concordo com termo de uso e condições"
-        android:textColor="#4E4E4E" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CLIQUE AQUI E CONHEÇA NOSSOS TERMOS "
-        android:textColor="#FFFAFA"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/buttonUserAvancar"
-        android:layout_width="173dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#0B423C"
-        android:paddingStart="10dp"
-        android:text="AVANÇAR" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
