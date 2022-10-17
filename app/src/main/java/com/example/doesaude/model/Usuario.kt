@@ -1,5 +1,6 @@
 package com.example.doesaude.model
 
+
 class Usuario(
     val id: Long,
     var nome: String,

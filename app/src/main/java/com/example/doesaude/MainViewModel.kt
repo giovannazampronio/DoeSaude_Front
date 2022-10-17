@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.doesaude.api.Repository
 import com.example.doesaude.model.Categoria
 import com.example.doesaude.model.Postagem
+import com.example.doesaude.model.Usuario
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -82,5 +83,10 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
                 listPostagem()
             }
         }
+    }
+
+    fun adicionarUser(usuario: Usuario){
+        vie
+
     }
 }

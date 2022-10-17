@@ -34,7 +34,7 @@
         android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textEndereco"
+        android:id="@+id/textNome"
         style="@style/edit_text"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCidade"
+        android:id="@+id/textEmailCadUser"
         style="@style/edit_text"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textBairro"
+        android:id="@+id/textTelefone"
         style="@style/edit_text"
         android:layout_width="382dp"
         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
         android:textSize="20sp" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textNumero"
+        android:id="@+id/textSenhaCadUser"
         style="@style/edit_text"
         android:layout_width="382dp"
         android:layout_height="wrap_content"
