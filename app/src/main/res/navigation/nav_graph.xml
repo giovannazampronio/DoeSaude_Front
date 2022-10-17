@@ -31,8 +31,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_cadastro_usuario"
-            app:destination="@id/cadastro_usuario" />
+            android:id="@+id/action_login_to_cadastro_usuario"></action>
+
     </fragment>
     <fragment
         android:id="@+id/cadastro_usuario"
@@ -40,8 +40,8 @@
         android:label="fragment_cadastro_usuario"
         tools:layout="@layout/fragment_cadastro_usuario" >
         <action
-            android:id="@+id/action_cadastro_usuario_to_cadastro_endereco"
-            app:destination="@id/cadastro_endereco" />
+            android:id="@+id/action_cadastro_usuario_to_cadastro_endereco"></action>
+
     </fragment>
     <fragment
         android:id="@+id/cadastro_endereco"
