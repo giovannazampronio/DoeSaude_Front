@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.doesaude.api.Repository
 import com.example.doesaude.model.Categoria
 import com.example.doesaude.model.Postagem
+import com.example.doesaude.model.Usuario
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -24,6 +25,12 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
     //PONTO DE ATENÇÃO
     private val _myPostagemResponse = MutableLiveData<Response<List<Postagem>>>()
     val myPostagemResponse: LiveData<Response<List<Postagem>>> = _myPostagemResponse
+
+    private val _myUsuarioResponse = MutableLiveData<Response<List<Usuario>>>()
+    val myUsuarioResponse: LiveData<Response<List<Usuario>>> = _myUsuarioResponse
+
+    val usuarioLogado = MutableLiveData<Usuario>()
+
 
     init {
         // listCategoria()
@@ -83,4 +90,28 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
             }
         }
     }
+
+    fun listUsuario(){
+        viewModelScope.launch {
+            try {
+                val responseUsuario = repository.listUsuario()
+                _myUsuarioResponse.value = responseUsuario
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+
+    fun addUsuario(usuario: Usuario){
+        viewModelScope.launch {
+            try {
+                repository.addUsuario(usuario)
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+    // repository.addCadastro(usuario)
+    // val responseUsuario = repository.getCadastro(usuario)
+    // usuarioLogado.value = responseUsuario
 }

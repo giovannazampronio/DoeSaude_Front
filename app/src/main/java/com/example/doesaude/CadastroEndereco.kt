@@ -13,7 +13,6 @@ class CadastroEndereco : Fragment() {
 
     private lateinit var binding: FragmentCadastroEnderecoBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,8 +23,9 @@ class CadastroEndereco : Fragment() {
         binding.buttonEndFinalizar.setOnClickListener{
             findNavController().navigate(R.id.action_cadastro_endereco_to_listFragment)
         }
-
         return binding.root
     }
+
+
 
 }

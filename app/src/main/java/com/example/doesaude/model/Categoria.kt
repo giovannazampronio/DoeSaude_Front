@@ -6,8 +6,6 @@ data class Categoria(
     var descricao: String?,
     var postagens: List<Postagem>?
 ) {
-
-
     override fun toString(): String {
         return tipo!!
     }
