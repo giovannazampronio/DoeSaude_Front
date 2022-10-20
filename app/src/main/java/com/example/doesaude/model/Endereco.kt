@@ -10,7 +10,7 @@ data class Endereco (
     //I
     var bairro: String,
     var numero: String,
-   var usuario: List<Usuario>?
+    var usuario: List<Usuario>?
 
 ) {
 }

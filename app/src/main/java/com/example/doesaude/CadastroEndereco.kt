@@ -7,13 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.doesaude.api.RetrofitInstance
-import com.example.doesaude.api.RetrofitViaCep
 import com.example.doesaude.databinding.FragmentCadastroEnderecoBinding
-import com.example.doesaude.databinding.FragmentCadastroUsuarioBinding
-import com.example.doesaude.model.CEP
-import retrofit2.Call
-import retrofit2.Response
-import javax.security.auth.callback.Callback
+
 
 class CadastroEndereco : Fragment() {
 
