@@ -6,13 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.doesaude.api.RetrofitInstance
+import com.example.doesaude.api.RetrofitViaCep
 import com.example.doesaude.databinding.FragmentCadastroEnderecoBinding
 import com.example.doesaude.databinding.FragmentCadastroUsuarioBinding
+import com.example.doesaude.model.CEP
+import retrofit2.Call
+import retrofit2.Response
+import javax.security.auth.callback.Callback
 
 class CadastroEndereco : Fragment() {
 
+
+
     private lateinit var binding: FragmentCadastroEnderecoBinding
-    private lateinit var bindingUser: FragmentCadastroUsuarioBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,6 +28,7 @@ class CadastroEndereco : Fragment() {
 
         binding = FragmentCadastroEnderecoBinding.inflate(layoutInflater, container, false)
 
+        val campoCEP = binding.textCep
 
 
         binding.buttonEndFinalizar.setOnClickListener{
@@ -32,3 +40,5 @@ class CadastroEndereco : Fragment() {
 
 
 }
+
+

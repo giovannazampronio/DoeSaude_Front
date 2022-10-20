@@ -75,11 +75,13 @@ class CadastroUsuario : Fragment() {
 
         var email = binding.textEmail.text.toString()
         var nome = binding.textNome.text.toString()
-        var cpf = binding.textCpf.text.toString()
+        var cpfSemMask = binding.textCpf.unMasked
+        var cpf = cpfSemMask.toString();
         var senha = binding.textSenha.text.toString()
         var confirmSenha = binding.textSenhaConfirm.text.toString()
         var dataNascimento = binding.textDataNasc.text.toString()
 
+        println("SEU CPF EH: " + cpfSemMask)
 
         if (validarCampos(email, nome, cpf, senha, confirmSenha, dataNascimento)){
             val salvar: String

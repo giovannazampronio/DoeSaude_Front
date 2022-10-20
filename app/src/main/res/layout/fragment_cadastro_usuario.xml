@@ -33,7 +33,7 @@
         style="@style/edit_text"
         android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="Nome"
@@ -47,7 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <com.google.android.material.textfield.TextInputEditText
+<!--    <com.santalu.maskara.widget.MaskEditText-->
+    <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/textCpf"
         style="@style/edit_text"
         android:layout_width="370sp"
@@ -62,6 +63,10 @@
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
         android:textSize="20sp"
+        android:inputType="text"
+        app:mask="___.___.___-__"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDataNasc" />
@@ -106,6 +111,7 @@
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="Senha"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="10dp"
         android:shadowColor="#EFE6E6"
@@ -125,6 +131,7 @@
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="Confirme sua senha"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="10dp"
         android:shadowColor="#EFE6E6"

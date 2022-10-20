@@ -21,15 +21,15 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         />
 
-    <com.google.android.material.textfield.TextInputEditText
+
+    <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/textCep"
         style="@style/edit_text"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="CEP"
@@ -39,25 +39,10 @@
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTelefone" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textTelefone"
-        style="@style/edit_text"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#BFFFFFFF"
-        android:hapticFeedbackEnabled="false"
-        android:hint="Telefone"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"
-        android:shadowColor="#EFE6E6"
-        android:textColor="#104D55"
-        android:textColorHint="#65000D0E"
-        android:textSize="20sp"
+        android:inputType="text"
+        app:mask="_____-___"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCadastro2" />
