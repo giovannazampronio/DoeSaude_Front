@@ -5,14 +5,6 @@
     <color name="start">#0AA6AC</color>
     <color name="end">#1DBBB3</color>
     <color name="mind">#79CDD1</color>
-<<<<<<< .merge_file_a11152
-    
-
-
-
-=======
-
-
     <!-- Tema personalizado do app -->
 
     <!-- Primary color-->
@@ -25,5 +17,5 @@
    <color name="red_dark">#8f0000</color>
      <color name="red_ligth">#ff5d49</color>
  -->
->>>>>>> .merge_file_a06792
+
 </resources>
