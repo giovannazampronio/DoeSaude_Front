@@ -27,8 +27,6 @@ class CadastroUsuario : Fragment() {
         // Inflate the layout for this fragment
          binding = FragmentCadastroUsuarioBinding.inflate(layoutInflater, container, false)
 
-<<<<<<< HEAD
-=======
         fun validarCampos(nome: String, cpf: String, email: String,
                                   senha: String, dataNasc: String): Boolean{
 
@@ -42,13 +40,10 @@ class CadastroUsuario : Fragment() {
 
         }
 
-
-
-
         binding.buttonUserAvancar.setOnClickListener{
             findNavController().navigate(R.id.action_cadastro_usuario_to_cadastro_endereco)
         }
->>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
+
 
         binding.buttonUserAvancar.setOnClickListener{
            inserirUsuarioBanco()
