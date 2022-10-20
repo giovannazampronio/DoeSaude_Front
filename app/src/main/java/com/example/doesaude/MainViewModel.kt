@@ -91,6 +91,7 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
         }
     }
 
+<<<<<<< HEAD
     fun listUsuario(){
         viewModelScope.launch {
             try {
@@ -114,4 +115,10 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
     // repository.addCadastro(usuario)
     // val responseUsuario = repository.getCadastro(usuario)
     // usuarioLogado.value = responseUsuario
+=======
+    fun adicionarUser(usuario: Usuario){
+        vie
+
+    }
+>>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
 }

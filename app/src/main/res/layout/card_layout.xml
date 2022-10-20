@@ -4,16 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+<<<<<<< HEAD
     android:layout_margin="10dp"
     android:backgroundTint="#FFFFFF"
     app:cardBackgroundColor="#FAFAFA"
     app:cardCornerRadius="20dp"
+=======
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="200dp"
+    android:layout_marginRight="10dp"
+>>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
     app:cardElevation="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
+=======
+        android:layout_height="447dp"
+        android:orientation="vertical"
+>>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
         android:padding="10dp">
 
         <ImageView

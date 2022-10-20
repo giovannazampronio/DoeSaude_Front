@@ -14,6 +14,9 @@ interface ApiService {
     @POST("postagem")
     suspend fun addPostagem(@Body postagem: Postagem): Response<Postagem>
 
+    @POST("usuario")
+    suspend fun addUser(@Body usuario: Usuario): Response<Usuario>
+
     @GET("postagem")
     suspend fun listPostagem(): Response<List<Postagem>>
 
