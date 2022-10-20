@@ -44,11 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textTelefone" />
 
     <com.google.android.material.textfield.TextInputEditText
-<<<<<<< HEAD
         android:id="@+id/textTelefone"
-=======
-        android:id="@+id/textEnd"
->>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
         style="@style/edit_text"
         android:layout_width="370dp"
         android:layout_height="wrap_content"

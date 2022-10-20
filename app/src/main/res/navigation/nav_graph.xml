@@ -43,7 +43,6 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-<<<<<<< HEAD
             android:id="@+id/action_login_to_cadastro_usuario"
             app:destination="@id/cadastro_usuario"
             app:popUpTo="@id/cadastro_usuario"
@@ -53,10 +52,6 @@
             app:destination="@id/listFragment"
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true" />
-=======
-            android:id="@+id/action_login_to_cadastro_usuario"></action>
-
->>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
     </fragment>
     <fragment
         android:id="@+id/cadastro_usuario"
@@ -64,15 +59,10 @@
         android:label="fragment_cadastro_usuario"
         tools:layout="@layout/fragment_cadastro_usuario" >
         <action
-<<<<<<< HEAD
             android:id="@+id/action_cadastro_usuario_to_cadastro_endereco"
             app:destination="@id/cadastro_endereco"
             app:popUpTo="@id/cadastro_endereco"
             app:popUpToInclusive="true" />
-=======
-            android:id="@+id/action_cadastro_usuario_to_cadastro_endereco"></action>
-
->>>>>>> fb57de17c59cb443dc419a1f511ec87c9f1f2f1b
     </fragment>
     <fragment
         android:id="@+id/cadastro_endereco"
