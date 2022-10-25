@@ -32,6 +32,7 @@ class MainViewModel @Inject constructor(private val repository: Repository): Vie
     val usuarioLogado = MutableLiveData<Usuario>()
 
 
+
     init {
         // listCategoria()
     }

@@ -52,6 +52,11 @@
             app:destination="@id/listFragment"
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_recuperarSenhaFragment"
+            app:destination="@id/recuperarSenhaFragment"
+            app:popUpTo="@id/recuperarSenhaFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/cadastro_usuario"
@@ -95,6 +100,17 @@
             android:id="@+id/action_meuPerfilFragment_to_listFragment"
             app:destination="@id/listFragment"
             app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/recuperarSenhaFragment"
+        android:name="com.example.doesaude.recuperarSenhaFragment"
+        android:label="fragment_recuperar_senha"
+        tools:layout="@layout/fragment_recuperar_senha" >
+        <action
+            android:id="@+id/action_recuperarSenhaFragment_to_login"
+            app:destination="@id/login"
+            app:popUpTo="@id/login"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

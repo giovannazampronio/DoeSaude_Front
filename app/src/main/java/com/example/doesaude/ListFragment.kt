@@ -43,6 +43,7 @@ class ListFragment : Fragment(), TaskClickListener {
             findNavController().navigate(R.id.action_listFragment_to_meuPerfilFragment)
         }
 
+
         binding.floatingAdd.setOnClickListener {
             mainViewModel.postagemSelecionada = null
             findNavController().navigate(R.id.action_listFragment_to_formFragment)

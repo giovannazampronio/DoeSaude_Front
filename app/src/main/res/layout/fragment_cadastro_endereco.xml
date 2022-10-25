@@ -8,44 +8,60 @@
     android:background="@drawable/backgroud"
     android:gravity="center">
 
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="245dp"
+        android:layout_height="455dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumero"
+        app:srcCompat="@drawable/cadend" />
+
     <TextView
-        android:id="@+id/textCadastro2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text=" Cadastro endereço"
-        android:textColor="#FFF2F2"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:text="Conecte -se  com pessoas proximas a você"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="349dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
-
+        app:srcCompat="@drawable/endereco" />
 
     <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/textCep"
         style="@style/edit_text"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="CEP"
+        android:inputType="text"
         android:minHeight="48dp"
         android:paddingStart="10dp"
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
         android:textSize="20sp"
-        android:inputType="text"
-        app:mask="_____-___"
-        app:maskCharacter="_"
-        app:maskStyle="completable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCadastro2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:mask="_____-___"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textBairro"
@@ -127,8 +143,7 @@
         android:id="@+id/buttonEndFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#00777D"
         android:paddingStart="10dp"
         android:text="CONTINUAR"

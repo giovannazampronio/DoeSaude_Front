@@ -95,8 +95,8 @@ class FormFragment : Fragment() {
     }
     private fun validarCampos(imagem: String, titulo: String, descricao: String): Boolean{
         return !(
-                (imagem == "" || titulo == "" || titulo.length < 2 || titulo.length > 10)
-                        || (descricao.length < 5 || descricao.length > 40 || descricao == "")
+                (imagem == "" || titulo == "" || titulo.length < 2 || titulo.length > 20)
+                        || (descricao.length < 3 || descricao.length > 40 || descricao == "")
                 )
     }
 

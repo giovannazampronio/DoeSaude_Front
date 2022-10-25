@@ -67,7 +67,7 @@ class CadastroUsuario : Fragment() {
                         (cpf.isNotBlank() && cpf.length == 11) &&
                         (senha.isNotBlank() && senha.length in 1..255) &&
                         (confirmSenha.isNotBlank() && confirmSenha.length in 1..255) &&
-                        (dataNascimento.isNotBlank() && dataNascimento.length in 1..9)
+                        (dataNascimento.isNotBlank() && dataNascimento.length in 1..11)
                 )
     }
 

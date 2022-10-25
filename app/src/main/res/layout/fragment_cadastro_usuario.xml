@@ -9,12 +9,44 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="178dp"
+        android:layout_height="215dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenhaConfirm"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/cadastro" />
+
+    <TextView
+        android:id="@+id/cadsttdxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Faça seu cadastro e venha fazer a difrença"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cadastre_se" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textEmail"
         style="@style/edit_text"
         android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="E-mail"
@@ -28,12 +60,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textCpf" />
 
+    <!--    <com.santalu.maskara.widget.MaskEditText-->
     <EditText
         android:id="@+id/textNome"
         style="@style/edit_text"
         android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="Nome"
@@ -44,10 +77,10 @@
         android:textColorHint="#65000D0E"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/cadsttdxt" />
 
-<!--    <com.santalu.maskara.widget.MaskEditText-->
     <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/textCpf"
         style="@style/edit_text"
@@ -57,50 +90,33 @@
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="CPF"
+        android:inputType="number"
         android:minHeight="48dp"
         android:paddingStart="10dp"
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
         android:textSize="20sp"
-        android:inputType="text"
-        app:mask="___.___.___-__"
-        app:maskCharacter="_"
-        app:maskStyle="completable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDataNasc" />
+        app:layout_constraintTop_toBottomOf="@+id/textDataNasc"
+        app:mask="___.___.___-__"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
 
     <Button
         android:id="@+id/buttonUserAvancar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#00777D"
         android:text="FINALIZAR CADASTRO"
         android:textColor="#FFFCFC"
         android:textSize="16sp"
         app:cornerRadius="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSenhaConfirm" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Dados Pessoais"
-        android:textColor="#FFF2F2"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/textSenha"
@@ -142,7 +158,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSenha" />
 
-    <com.google.android.material.textfield.TextInputEditText
+
+    <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/textDataNasc"
         style="@style/edit_text"
         android:layout_width="370sp"
@@ -158,7 +175,13 @@
         android:textColorHint="#65000D0E"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNome" />
+        app:layout_constraintTop_toBottomOf="@+id/textNome"
+        app:mask="__/__/____"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
