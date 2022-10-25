@@ -23,10 +23,8 @@ class ListFragment : Fragment(), TaskClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
-
 
         mainViewModel.listPostagem()
 
@@ -36,6 +34,14 @@ class ListFragment : Fragment(), TaskClickListener {
         binding.recyclerTarefa.adapter = adapter
         binding.recyclerTarefa.setHasFixedSize(true)
 
+
+        binding.buttonSuporte.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_suporteFragment)
+        }
+
+        binding.buttonMeuPerfil.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_meuPerfilFragment)
+        }
 
 
         binding.floatingAdd.setOnClickListener {

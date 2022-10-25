@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/idll"
+    android:id="@+id/constrainCadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroud"
@@ -11,52 +11,42 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="165dp"
-        android:layout_height="191dp"
-        android:padding="15dp"
-        app:srcCompat="@drawable/logo_cadastro" />
+        android:layout_width="178dp"
+        android:layout_height="215dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenhaConfirm"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/cadastro" />
+
+    <TextView
+        android:id="@+id/cadsttdxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Faça seu cadastro e venha fazer a difrença"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cadastre_se" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCpf"
+        android:id="@+id/textEmail"
         style="@style/edit_text"
-        android:layout_width="382dp"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#BFFFFFFF"
-        android:hapticFeedbackEnabled="false"
-        android:hint="CPF"
-        android:minHeight="48dp"
-        android:paddingStart="10dp"
-        android:shadowColor="#EFE6E6"
-        android:textColor="#104D55"
-        android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textEndereco"
-        style="@style/edit_text"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#BFFFFFFF"
-        android:hapticFeedbackEnabled="false"
-        android:hint="Nome"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:shadowColor="#EFE6E6"
-        android:textColor="#104D55"
-        android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCidade"
-        style="@style/edit_text"
-        android:layout_width="378dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="E-mail"
@@ -65,68 +55,133 @@
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCpf" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textBairro"
+    <!--    <com.santalu.maskara.widget.MaskEditText-->
+    <EditText
+        android:id="@+id/textNome"
         style="@style/edit_text"
-        android:layout_width="382dp"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
-        android:hint="Telefone"
+        android:hint="Nome"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:shadowColor="#9FEFE6E6"
+        android:textColor="#104D55"
+        android:textColorHint="#65000D0E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadsttdxt" />
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/textCpf"
+        style="@style/edit_text"
+        android:layout_width="370sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:hint="CPF"
+        android:inputType="number"
         android:minHeight="48dp"
         android:paddingStart="10dp"
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDataNasc"
+        app:mask="___.___.___-__"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textNumero"
+    <Button
+        android:id="@+id/buttonUserAvancar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#00777D"
+        android:text="FINALIZAR CADASTRO"
+        android:textColor="#FFFCFC"
+        android:textSize="16sp"
+        app:cornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenhaConfirm" />
+
+    <EditText
+        android:id="@+id/textSenha"
         style="@style/edit_text"
-        android:layout_width="382dp"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#BFFFFFFF"
         android:hapticFeedbackEnabled="false"
         android:hint="Senha"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="10dp"
         android:shadowColor="#EFE6E6"
         android:textColor="#104D55"
         android:textColorHint="#65000D0E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="314dp"
+    <EditText
+        android:id="@+id/textSenhaConfirm"
+        style="@style/edit_text"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Confirme sua senha"
+        android:inputType="textPassword"
         android:minHeight="48dp"
-        android:text="Concordo com termo de uso e condições"
-        android:textColor="#4E4E4E" />
+        android:padding="10dp"
+        android:shadowColor="#EFE6E6"
+        android:textColor="#104D55"
+        android:textColorHint="#65000D0E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSenha" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CLIQUE AQUI E CONHEÇA NOSSOS TERMOS "
-        android:textColor="#FFFAFA"
-        android:textSize="10sp" />
 
-    <Button
-        android:id="@+id/buttonUserAvancar"
-        android:layout_width="173dp"
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/textDataNasc"
+        style="@style/edit_text"
+        android:layout_width="370sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#0B423C"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Nascimento"
+        android:minHeight="48dp"
         android:paddingStart="10dp"
-        android:text="AVANÇAR" />
+        android:shadowColor="#EFE6E6"
+        android:textColor="#104D55"
+        android:textColorHint="#65000D0E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNome"
+        app:mask="__/__/____"
+        app:maskCharacter="_"
+        app:maskStyle="completable" />
 
-</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
