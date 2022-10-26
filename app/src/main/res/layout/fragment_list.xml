@@ -29,10 +29,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerTarefa"
-        android:layout_width="404dp"
-        android:layout_height="543dp"
+        android:layout_width="395dp"
+        android:layout_height="583dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="32dp"
         app:circularflow_defaultRadius="40dp"
         app:circularflow_radiusInDP="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/floatingAdd"
@@ -42,12 +42,13 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingAdd"
-        android:layout_width="71dp"
+        android:layout_width="wrap_content"
         android:layout_height="76dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="20dp"
         android:clickable="true"
         android:contentDescription="TODO"
         android:isScrollContainer="false"
+        android:padding="20dp"
         android:src="@drawable/ic_baseline_add_24"
         app:backgroundTint="#00777D"
         app:layout_constraintBottom_toBottomOf="parent"
